@@ -1,0 +1,372 @@
+/* App.css */
+html, body {
+  height: auto; /* 確保 body 的高度自適應內容 */
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+.App {
+  height: auto; /* React 頂層容器也要自適應高度 */
+  min-height: 100vh; /* 確保至少填滿視窗高度 */
+}
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 990px; /* 控制地圖的最大寬度 */
+
+    overflow-y: auto; /* 垂直滾動 */
+    overflow-x: hidden; /* 禁用水平滾動 */
+  margin: 0 auto;
+}
+
+.mrt-map {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.station-button {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+
+}
+
+.station-button:hover {
+  background-color: lightblue;
+}
+
+.station-info {
+  text-align: left;
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.station-info h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.station-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.station-info li {
+  margin-bottom: 15px;
+}
+
+.station-info a {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.station-info a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.rating {
+  color: #ffcc00;
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+
+
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 20px 0;
+  color: #333;
+}
+
+.home-options-horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100vh - 80px); /* 扣除標題的高度 */
+  padding: 0 10%; /* 左右留白 */
+}
+
+.option {
+  width: 550px; /* 放大按鈕寬度 */
+  height: 600px; /* 放大按鈕高度 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px; /* 增加圓角 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 24px; /* 增大字體 */
+  font-weight: bold; /* 加粗文字 */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.option:hover {
+  background-color: #eaeaea;
+  transform: scale(1.05);
+}
+
+.option.left {
+  background-color: #f0f8ff;
+}
+
+.option.right {
+  background-color: #ffe4e1;
+}
+
+.option h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+.recommendations {
+  padding: 20px;
+  text-align: center;
+}
+
+.recommendations h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.ramen-rankings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ranking-item {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  width: 80%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ranking-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 20px;
+  color: #ff4500;
+}
+
+.ranking-details {
+  flex: 1;
+  text-align: left;
+}
+
+.ranking-details a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.ranking-details a:hover {
+  color: #0056b3;
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+.home-button-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.home-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #0056b3;
+}
+
+
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+.ranking-details span {
+  margin-right: 2px;
+}
+
+/* App.css */
+.layout {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .recommendations {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .map-container {
+    flex: 1;
+    padding: 20px;
+    height: calc(100vh - 40px);
+    overflow: hidden;
+  }
+  
+
+  .ranking-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4500;
+  }
+  
+
+  
+  .stars {
+    margin-top: 5px;
+  }
+  
+  .star.full {
+    color: #ffc107;
+  }
+  
+  .star.half {
+    color: #ccc;
+  }
+  
+  .tags {
+    margin-top: 8px;
+  }
+  
+  .tag {
+    display: inline-block;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-right: 5px;
+    color: #333;
+  }
+  .stars {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+  }
+  
+  .star {
+    margin-right: 2px;
+    font-size: 1.2rem;
+  }
+  
+  .star.full {
+    color: #ffc107; /* 金色 */
+  }
+  
+  .star.half {
+    color: #ffc107; /* 金色 */
+  }
+  
+  .star.empty {
+    color: #ddd; /* 淡灰色 */
+  }
+
+
+  .ranking-item {
+    display: flex; /* 水平排列文字與圖片 */
+    align-items: center; /* 垂直居中 */
+    gap: 20px; /* 文字和圖片之間的間距 */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+    margin-bottom: 20px;
+    background-color: #fff; /* 白色背景 */
+  }
+  
+  .ranking-details {
+    flex: 1; /* 文字部分占據剩餘空間 */
+    text-align: left; /* 文字靠左對齊 */
+  }
+  
+  .ranking-image {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .ranking-image img {
+    width: 100%; /* 圖片寬度填滿容器 */
+    height: 100%; /* 圖片高度填滿容器 */
+    object-fit: cover; /* 保持圖片比例裁切 */
+    border-radius: 8px; /* 圓角效果 */
+  }
+  
+  .tags .tag {
+    display: inline-block;
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 12px;
+    font-size: 12px;
+  }
+  
+  .stars {
+    display: flex; /* 水平排列星星 */
+    gap: 2px; /* 星星之間的間距 */
+  }
